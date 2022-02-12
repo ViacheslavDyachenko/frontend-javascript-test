@@ -1,0 +1,18 @@
+@import "../../styles/root.scss";
+
+.button {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    position: relative;
+    left: 132px;
+    background-color: $white-color;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: $grey-color;
+    }
+}

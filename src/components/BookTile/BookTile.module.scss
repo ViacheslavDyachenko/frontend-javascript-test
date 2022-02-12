@@ -1,0 +1,32 @@
+@import "../../styles/root.scss";
+
+.book-tile {
+    display: grid;
+    grid-template-rows: 5fr 1fr 1fr 1fr;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: $grey-color;
+    &__img {
+        margin: auto;
+        height: 200px;
+        width: auto;
+    }
+    &__categories {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $dark-grey-color;
+        margin-left: 10px;
+    }
+    &__name {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $black-color;
+        font-weight: 900;
+        margin-left: 10px;
+    }
+    &__authors {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $dark-grey-color;
+        margin: 0 10px;
+    }
+}
