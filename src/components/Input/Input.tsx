@@ -3,12 +3,14 @@ import style from "./Input.module.scss";
 
 type InputProps = {
     value: string;
-    onChange: (event: React.FormEvent) => void
+    onChange: (event: React.FormEvent) => void,
+    onFocus: (event: React.FocusEvent) => void,
+    onBlur: (event: React.FocusEvent) => void
 }
 
-const Input = ({value, onChange}: InputProps) => {
+const Input = ({value, onChange, onFocus, onBlur}: InputProps) => {
     return (
-        <input className={style.input} type="text" value={value} onChange={onChange} />
+        <input onBlur={onBlur} onFocus={onFocus} className={style.input} type="text" value={value} onChange={onChange} />
     )
 }
 export default Input;

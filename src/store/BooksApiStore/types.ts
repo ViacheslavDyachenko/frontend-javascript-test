@@ -12,7 +12,13 @@ import { BooksItemModel } from "../Models/books/Books";
 export type GetBooksListParams = {
     booksName: string,
     startIndex: number,
-    lastIndex: number
+    lastIndex: number,
+    categories: string,
+    sort: string
+}
+
+export type GetBookInfoParams = {
+    id: string
 }
 
 export type ApiResp<BooksItemApi> =  {
@@ -24,6 +30,16 @@ export type ApiResp<BooksItemApi> =  {
     status: number | StatusHTTP.BAD_STATUS
 }
 
+export type ApiRespInfo<BooksItemApi> =  {
+    success: boolean,
+    data: {
+        totalItems: number,
+        items: BooksItemApi
+    },
+    status: number | StatusHTTP.BAD_STATUS
+}
+
 export interface IBooksStore {
-    getBooksNextList(params: GetBooksListParams, page: number): Promise<ApiResp<BooksItemModel>>;
+    getBooksNextList(params: GetBooksListParams): Promise<ApiResp<BooksItemModel>>;
+    getBookInfo(params: GetBookInfoParams): Promise<ApiRespInfo<BooksItemModel>>;
 }

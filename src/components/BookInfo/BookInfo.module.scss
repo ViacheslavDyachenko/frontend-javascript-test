@@ -1,0 +1,60 @@
+@import "../../styles/root.scss ";
+
+.book-info-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0;
+    &__img {
+        margin: auto;
+        grid-column-start: 1;
+        width: 300px;
+        height: auto;
+    }
+    &__categories,
+    &__title,
+    &__authors,
+    &__description {
+        width: 90%;
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    &__categories {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $grey-color;
+    }
+    &__title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $black-color;
+        font-size: 16px;
+        margin-top: 100px;
+    }
+    &__authors {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $grey-color;
+        margin-top: 200px;
+    }
+    &__description {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: $black-color;
+        font-size: 14px;
+        margin-top: 250px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .book-info-block {
+        grid-template-columns: 1fr;
+        &__categories,
+        &__title,
+        &__authors,
+        &__description {
+            grid-column-start: 1;
+            grid-row-start: 2;
+            width: 100%;
+            text-align: center;
+        }
+        &__categories {
+            margin-top: 20px;
+        }
+    }
+}

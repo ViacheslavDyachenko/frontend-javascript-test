@@ -12,3 +12,11 @@
         outline: 2px solid $red-color;
     }
 }
+
+@media all and (max-width: 850px) {
+    .input {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+}

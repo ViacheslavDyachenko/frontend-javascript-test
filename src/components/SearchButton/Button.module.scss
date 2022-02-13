@@ -8,11 +8,19 @@
     height: 35px;
     margin: auto;
     position: relative;
-    left: 132px;
+    left: 133px;
     background-color: $white-color;
     border: none;
     cursor: pointer;
     &:hover {
         background-color: $grey-color;
+    }
+}
+
+@media all and (max-width: 850px) {
+    .button {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 1;
     }
 }

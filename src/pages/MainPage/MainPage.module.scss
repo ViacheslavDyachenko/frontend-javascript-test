@@ -22,3 +22,34 @@
         margin: auto;
     }
 }
+
+@media all and (max-width: 850px) {
+    .categories {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .sorting {
+        grid-column-start: 1;
+        grid-row-start: 4;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .books-block {
+        grid-template-columns: repeat(2, 1fr);
+        &__counter {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        } 
+    }
+}
+@media all and (max-width: 500px) {
+    .books-block {
+        grid-template-columns: 1fr;
+        &__counter {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        } 
+    }
+}
